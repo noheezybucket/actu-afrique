@@ -24,11 +24,10 @@ import {RouterLink} from '@angular/router';
           <nav>
             <ul class="flex gap-10 font-semibold uppercase">
               <li>
-                <a routerLink="/">À la une</a>
+                <a routerLink="/">Actualités</a>
                </li>
-              <li>Politique</li>
-              <li>Sport</li>
-              <li>People</li>
+              <li>Tendances</li>
+              <li>Sondages</li>
             </ul>
           </nav>
 

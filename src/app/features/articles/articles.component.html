@@ -1,4 +1,14 @@
 
-<article>
+<article class="mt-5">
+<!--  <div class="section-width">-->
+<!--    <h1>Infos à la une</h1>-->
+<!--  </div>-->
+</article>
+
+<article class="section-width">
+  <aside></aside>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+    <app-article-card *ngFor="let article of articlesList" [article]="article"></app-article-card>
+  </div>
 
 </article>
