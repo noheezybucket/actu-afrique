@@ -5,10 +5,17 @@
 <!--  </div>-->
 </article>
 
-<article class="section-width">
-  <aside></aside>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">
-    <app-article-card *ngFor="let article of articlesList" [article]="article"></app-article-card>
+<article class="section-width flex gap-5">
+  <div class="sticky top-10 self-start h-fit">
+    <app-sidebar [articles]="articlesList"></app-sidebar>
   </div>
+<!--  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">-->
+<!--    <app-article-card *ngFor="let article of articlesList" [article]="article"></app-article-card>-->
+<!--  </div>-->
 
+  <div class="columns-1 sm:columns-2 lg:columns-3 gap-5">
+    <div *ngFor="let article of articlesList" class="break-inside-avoid mb-5">
+      <app-article-card [article]="article"></app-article-card>
+    </div>
+  </div>
 </article>

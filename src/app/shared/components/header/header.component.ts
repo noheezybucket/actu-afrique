@@ -1,46 +1,44 @@
 import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router';
+import {RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'app-header',
   imports: [
-    RouterLink
+    RouterLink,
+    RouterLinkActive
   ],
   template: `
     <header>
       <section class="section-width space-y-5 mt-5">
         <section class="flex justify-between items-center">
-          <div class="flex">
-            <img src="/assets/logo.svg" alt="Actu Afrique" class="w-[50px]" />
+          <div class="flex gap-2">
+            <img src="/assets/logo.svg" alt="Actu Afrique" class="w-[50px] h-[50px] border rounded-full border-orange-500" />
             <div class="flex-col">
               <span class="font-bold">Actu</span> <br/>
               <span>Afrique</span>
             </div>
           </div>
-          <button class="btn-primary">Télécharger l'app mobile</button>
-        </section>
-
-        <section class="flex justify-between items-center bg-gray-100 p-2 rounded">
           <nav>
-            <ul class="flex gap-10 font-semibold uppercase">
+            <ul class="flex gap-5">
               <li>
-                <a routerLink="/">Actualités</a>
-               </li>
-              <li>Tendances</li>
-              <li>Sondages</li>
+                <a routerLink="/" routerLinkActive="active-link">Actualités</a>
+              </li>
+              <li>
+                <a routerLink="/tendencies" routerLinkActive="active-link">Tendances</a>
+
+              </li>
+              <li>
+                <a routerLink="/votes" routerLinkActive="active-link">Sondages</a>
+
+              </li>
             </ul>
           </nav>
+          <div class="flex gap-2">
+            <button class="btn-primary flex items-center justify-center gap-2">App iOS <img src="/assets/ios.svg" class="w-5"/></button>
+            <button class="btn-primary flex items-center justify-center gap-2">App Android <img src="/assets/android.svg" class="w-5"/></button>
 
-          <div>
-            <form>
-              <select class="border p-2 rounded bg-primary text-white">
-                <option>Sénégal</option>
-                <option>Guinée</option>
-              </select>
-            </form>
           </div>
         </section>
-
       </section>
     </header>
   `,

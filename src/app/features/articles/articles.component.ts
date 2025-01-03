@@ -2,13 +2,16 @@ import {Component, inject} from '@angular/core';
 import {ArticleCardComponent} from './components/article-card/article-card.component';
 import {Article} from './article';
 import {ArticlesService} from './services/articles.service';
-import {NgForOf} from '@angular/common';
+import {NgClass, NgForOf} from '@angular/common';
+import {SidebarComponent} from '../../shared/components/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-articles',
   imports: [
     ArticleCardComponent,
-    NgForOf
+    NgForOf,
+    SidebarComponent,
+    NgClass
   ],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.css'

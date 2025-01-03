@@ -16,5 +16,19 @@
 /*buttons*/
 
 .btn-primary {
-  @apply bg-primary text-white p-2 rounded;
+  @apply bg-orange-500 text-white p-2 rounded;
+}
+
+/*form*/
+.input-form {
+  @apply border py-3 px-1 rounded-lg w-full;
+}
+
+
+/* route*/
+a {
+  @apply hover:text-orange-500
+}
+.active-link {
+  @apply text-orange-500  p-2 rounded font-bold;
 }
