@@ -8,8 +8,8 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
     RouterLinkActive
   ],
   template: `
-    <header>
-      <section class="section-width space-y-5 mt-5">
+    <header class="border py-5">
+      <section class="section-width space-y-5">
         <section class="flex justify-between items-center">
           <div class="flex gap-2">
             <img src="/assets/logo.svg" alt="Actu Afrique" class="w-[50px] h-[50px] border rounded-full border-orange-500" />
@@ -18,7 +18,7 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
               <span>Afrique</span>
             </div>
           </div>
-          <nav>
+          <nav class="hidden md:block">
             <ul class="flex gap-5">
               <li>
                 <a routerLink="/" routerLinkActive="active-link">Actualités</a>
@@ -33,11 +33,11 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
               </li>
             </ul>
           </nav>
-          <div class="flex gap-2">
+
+          <section class="flex gap-2">
             <button class="btn-primary flex items-center justify-center gap-2">App iOS <img src="/assets/ios.svg" class="w-5"/></button>
             <button class="btn-primary flex items-center justify-center gap-2">App Android <img src="/assets/android.svg" class="w-5"/></button>
-
-          </div>
+          </section>
         </section>
       </section>
     </header>

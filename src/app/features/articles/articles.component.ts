@@ -2,7 +2,7 @@ import {Component, inject} from '@angular/core';
 import {ArticleCardComponent} from './components/article-card/article-card.component';
 import {Article} from './article';
 import {ArticlesService} from './services/articles.service';
-import {NgClass, NgForOf} from '@angular/common';
+import {NgClass, NgForOf, SlicePipe} from '@angular/common';
 import {SidebarComponent} from '../../shared/components/sidebar/sidebar.component';
 
 @Component({
@@ -11,7 +11,8 @@ import {SidebarComponent} from '../../shared/components/sidebar/sidebar.componen
     ArticleCardComponent,
     NgForOf,
     SidebarComponent,
-    NgClass
+    NgClass,
+    SlicePipe
   ],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.css'

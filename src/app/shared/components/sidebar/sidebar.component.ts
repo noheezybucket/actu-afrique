@@ -5,11 +5,11 @@ import {Article} from '../../../features/articles/article';
   selector: 'app-sidebar',
   imports: [],
   template: `
-    <aside class="space-y-4 w-[300px]  p-2 rounded">
+    <aside class="space-y-4 w-[300px] rounded">
 
       <label for="search">
         <p class="font-bold text-lg">Recherche</p>
-        <input type="text" placeholder="Entrer quelque chose..." class="input-form"/>
+        <input type="text" placeholder="Qu'avez vous en tête ?" class="input-form"/>
       </label>
 
       <fieldset>
@@ -20,7 +20,6 @@ import {Article} from '../../../features/articles/article';
             <option>Mauritanie</option>
             <option>Mali</option>
           </select>
-
 
       </fieldset>
 

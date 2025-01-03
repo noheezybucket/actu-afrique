@@ -1,20 +1,20 @@
 
-<article class="mt-5">
-<!--  <div class="section-width">-->
-<!--    <h1>Infos à la une</h1>-->
-<!--  </div>-->
+<article class="mt-5 mb-5 space-y-5 section-width">
+<!--  <h2 class="font-bold text-4xl">Actu à la une</h2>-->
+  <div class="gap-5">
+    <div *ngFor="let article of articlesList | slice:0:1" class="mb-5 break-inside-avoid">
+      <app-article-card [article]="article"></app-article-card>
+    </div>
+  </div>
 </article>
 
 <article class="section-width flex gap-5">
   <div class="sticky top-10 self-start h-fit">
     <app-sidebar [articles]="articlesList"></app-sidebar>
   </div>
-<!--  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">-->
-<!--    <app-article-card *ngFor="let article of articlesList" [article]="article"></app-article-card>-->
-<!--  </div>-->
 
   <div class="columns-1 sm:columns-2 lg:columns-3 gap-5">
-    <div *ngFor="let article of articlesList" class="break-inside-avoid mb-5">
+    <div *ngFor="let article of articlesList | slice:3" class="break-inside-avoid mb-5">
       <app-article-card [article]="article"></app-article-card>
     </div>
   </div>
